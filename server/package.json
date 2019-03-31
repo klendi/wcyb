@@ -5,11 +5,16 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
-    "start": "node server.js"
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js"
   },
   "author": "Klendi Gocci",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
@@ -17,8 +22,6 @@
     "mongoose": "^5.4.20"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "nodemon": "^1.18.10"
   }
 }

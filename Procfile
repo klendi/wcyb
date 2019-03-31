@@ -1,2 +1,1 @@
-server: node server/server.js
-client: npm start
+server: npm start --prefix server
