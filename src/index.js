@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import { HashRouter } from 'react-router-dom'
 import Router from './router/router'
+const dotenv = require('dotenv').config()
 
 ReactDOM.render(
   <Provider store={store}>

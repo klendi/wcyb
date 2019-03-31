@@ -7,7 +7,7 @@ import {
 import axios from 'axios'
 import store from '../store'
 import { endTheBar } from '../utils/startStopTheBar'
-const baseURL = process.env.baseURL || 'http://localhost:8000'
+const baseURL = process.env.REACT_APP_BASE_URL_API || 'http://localhost:8000'
 
 export const fetchItems = value => {
   console.log('this got called firing axios', value)

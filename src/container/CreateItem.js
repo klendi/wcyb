@@ -12,7 +12,8 @@ export default class CreateItem extends Component {
   }
   onSubmit = e => {
     e.preventDefault()
-    const baseURI = process.env.baseURL || 'http://localhost:8000'
+    const baseURI =
+      process.env.REACT_APP_BASE_URL_API || 'http://localhost:8000'
     console.log(baseURI)
     axios
       .post(`${baseURI}/create/item`, {
